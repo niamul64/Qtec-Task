@@ -14,3 +14,7 @@ box-shadow: 1px 4px 8px #000000;
       -webkit-border-radius: 5px;
       border-radius: 5px;
 }
+
+.fiter_border{
+      border-left-style: double;
+}
