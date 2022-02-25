@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block head %}
 <title>Show Key words</title>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS_JS/style.css' %}">
 {% endblock %}
 
 
 {% block body %} {% endblock %}
 
+
+
 {% block body2 %} {% endblock %}
 
-{% block end %} {% endblock %}
+{% block end %}
+<script src="{% static 'CSS_JS/script.js' %}" type=""> </script>
+{% endblock %}
