@@ -1,4 +1,16 @@
 
 .navBackG{
-      background-color: #a3d0f0;
+      background-color: #99ccf0;
+      -moz-box-shadow: 1px 4px 8px #000000;
+-webkit-box-shadow: 1px 4px 8px #000000;
+box-shadow: 1px 4px 8px #000000;
+}
+
+
+.qtec{
+      padding: 3px;
+      border:dashed 5px #000000;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
 }
