@@ -53,7 +53,7 @@ function checkBox() {
                               //console.log(box.value)
                               let elelement_countVlaue = task.children[1].children[1].textContent;
 
-                              if (elelement_countVlaue.toLowerCase().indexOf(box.value) != -1) {
+                              if (elelement_countVlaue == (box.value)) {
                                     list_to_dis.push(task);
                               }
                         }
