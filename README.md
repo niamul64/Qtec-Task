@@ -1,6 +1,6 @@
 ## Qtec-Task-1
 
-## the task is hosted in a free hosting server called: 'pythonanywhere'.
+## the web-site is hosted in a free hosting server called: 'pythonanywhere'.
 ## url: http://qtec.pythonanywhere.com/
 
 ## github link of the project: https://github.com/niamul64/Qtec-Task-p1
