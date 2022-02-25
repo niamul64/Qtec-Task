@@ -24,13 +24,14 @@
                         <li class="mb-3">
                               <ul>{{i.key_word}}</ul>
                               <ul>
-                                    Total searched by this key word: <span>{{i.count}}</span> times.
+                                    <span> Total searched by this key word: </span> <span>{{i.count}}</span><span>
+                                          times.</span>
                               </ul>
                               <ul>
-                                    Search Result: <span>{{i.result_showed}}</span> .
+                                    <span> Search Result:</span> <span>{{i.result_showed}}</span>
                               </ul>
                               <ul>
-                                    Last search by the user: <span>{{i.last_search_by}}</span>.
+                                    <span> Last search by the user: </span><span>{{i.last_search_by}}</span>.
                               </ul>
                         </li>
 
@@ -55,25 +56,29 @@
                   <div id="for_first_filters">
 
                         <div class="form-check">
-                              <input class="form-check-input count" type="checkbox" value=2 id="2_times">
+                              <input class="form-check-input count" type="checkbox" value=2 id="2_times"
+                                    onclick="checkBox()">
                               <label class="form-check-label" for="2_times">
                                     2 times found
                               </label>
                         </div>
                         <div class="form-check">
-                              <input class="form-check-input count" type="checkbox" value=5 id="5_times">
+                              <input class="form-check-input count" type="checkbox" value=5 id="5_times"
+                                    onclick="checkBox()">
                               <label class="form-check-label" for="5_times">
                                     5 times found
                               </label>
                         </div>
                         <div class="form-check">
-                              <input class="form-check-input count" type="checkbox" value=10 id="10_times">
+                              <input class="form-check-input count" type="checkbox" value=10 id="10_times"
+                                    onclick="checkBox()">
                               <label class="form-check-label" for="10_times">
                                     10 time found
                               </label>
                         </div>
                         <div class="form-check">
-                              <input class="form-check-input count" type="checkbox" value=20 id="20_times">
+                              <input class="form-check-input count" type="checkbox" value=20 id="20_times"
+                                    onclick="checkBox()">
                               <label class="form-check-label" for="10_times">
                                     20 time found
                               </label>
@@ -88,7 +93,8 @@
                   <div id="for_2nd_filters">
                         {% for i in user%}
                         <div class="form-check">
-                              <input class="form-check-input count user_name" type="checkbox" value={{i}} id={{i}}>
+                              <input class="form-check-input user_name" type="checkbox" value={{i}} id={{i}}
+                                    onclick="checkBox()">
                               <label class="form-check-label" for={{i}}>
                                     {{i}}
                               </label>
