@@ -5,6 +5,7 @@ function filterTask(e) {
       let text = e.target.value.toLowerCase();
       let boxes = document.querySelectorAll('input[type="checkbox"]');
       let flag = true;
+
       boxes.forEach(box => {
             if (box.checked == true) {
                   flag = false;
@@ -24,9 +25,9 @@ function filterTask(e) {
             });
       }
       else {
-            document.querySelectorAll('li').forEach(task => {
 
-            });
+
+            checkBox();
       }
 
 }
@@ -37,7 +38,6 @@ function checkBox() {
       let ellelements = document.querySelectorAll('li')
 
 
-      filter.value = ""
 
       flag_no_box_checked = true;
 
@@ -61,7 +61,7 @@ function checkBox() {
                         else if (box.classList.contains('user_name')) {
                               //console.log(box.value)
                               let elelement_Name_Vlaue = task.children[3].children[1].textContent;
-                              console.log(elelement_Name_Vlaue)
+
 
                               if (elelement_Name_Vlaue.toLowerCase().indexOf(box.value) != -1) {
 
@@ -92,5 +92,30 @@ function checkBox() {
             });
       }
 
+
+      let filter = document.querySelector('#task_filter');
+      let text = filter.value.toLowerCase();
+      if (text.length > 0 && flag_no_box_checked !== true) {
+            bothFilter(list_to_dis, text);
+      }
+
+
+}
+
+
+function bothFilter(list, text) {
+
+
+
+      list.forEach(task => {
+            //console.log(task.firstElementChild.textContent)
+            let item = task.firstElementChild.textContent;
+
+            if (item.toLowerCase().indexOf(text) != -1) {
+                  task.style.display = 'block';
+            } else {
+                  task.style.display = 'none';
+            }
+      });
 
 }
