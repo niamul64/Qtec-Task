@@ -41,6 +41,7 @@ function checkBox() {
 
       flag_no_box_checked = true;
 
+      list_to_dis = [];
       boxes.forEach(box => {
             if (box.checked == true) {
                   flag_no_box_checked = false;
@@ -53,11 +54,7 @@ function checkBox() {
                               let elelement_countVlaue = task.children[1].children[1].textContent;
 
                               if (elelement_countVlaue.toLowerCase().indexOf(box.value) != -1) {
-                                    task.style.display = 'block';
-                                    ellelements.splice(task, 1);
-
-                              } else {
-                                    task.style.display = 'none';
+                                    list_to_dis.push(task);
                               }
                         }
 
@@ -67,11 +64,9 @@ function checkBox() {
                               console.log(elelement_Name_Vlaue)
 
                               if (elelement_Name_Vlaue.toLowerCase().indexOf(box.value) != -1) {
-                                    task.style.display = 'block';
-                                    ellelements.splice(task, 1);
 
-                              } else {
-                                    task.style.display = 'none';
+                                    list_to_dis.push(task);
+
                               }
 
                         }
@@ -81,7 +76,15 @@ function checkBox() {
 
 
       });
+      //console.log(list_to_dis);
 
+      ellelements.forEach(task => {
+            task.style.display = 'none';
+      });
+
+      list_to_dis.forEach(task => {
+            task.style.display = 'block';
+      });
 
       if (flag_no_box_checked == true) {
             ellelements.forEach(task => {
